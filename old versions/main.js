@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth page transition effect
     document.body.style.opacity = "0";
@@ -17,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Page Navigation Buttons
     const buttons = {
         enterButton: "pages/home.html",
-        proceedButton: "next_level.html",
-        exploreButton: "archive.html",
+        proceedButton: "pages/next_level.html",
+        exploreButton: "pages/archive.html",
         archiveButton: "pages/archive.html",
         manifestoButton: "pages/manifesto.html",
         returnButton: "../index.html"
@@ -63,9 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Adaptive Background Animation (Mouse Movement)
     document.body.addEventListener("mousemove", (event) => {
-        const x = (event.clientX / window.innerWidth) - 0.9;
-        const y = (event.clientY / window.innerHeight) - 0.9;
+        const x = (event.clientX / window.innerWidth) - 0.5;
+        const y = (event.clientY / window.innerHeight) - 0.5;
         document.body.style.backgroundPosition = `${x * 50}px ${y * 50}px`;
     });
-        // Initial page load opacity effect
-    });
+});

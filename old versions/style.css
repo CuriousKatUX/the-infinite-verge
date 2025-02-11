@@ -1,0 +1,113 @@
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Central Container */
+.container, .threshold-container, .next-level-container, .archive-container, .manifesto-container {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s forwards ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Text Elements */
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Portal & Gateway Animation */
+.portal, .gateway {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 60%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: pulse 3s infinite alternate ease-in-out, glitch 1.5s infinite linear;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes glitch {
+    0% { filter: blur(1px) hue-rotate(0deg); }
+    50% { filter: blur(3px) hue-rotate(20deg); }
+    100% { filter: blur(1px) hue-rotate(0deg); }
+}
+
+/* Background Animation */
+body::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 80%);
+    top: -75%;
+    left: -75%;
+    animation: moveBackground 20s linear infinite, glowPulse 5s infinite alternate;
+    z-index: 1;
+}
+
+@keyframes moveBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes glowPulse {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: #ffffff;
+    color: #000000;
+}
