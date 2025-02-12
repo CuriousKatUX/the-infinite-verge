@@ -58,6 +58,12 @@ body {
     animation: fadeIn 2s forwards ease-in-out;
     position: relative;
     z-index: 2;
+    background-color: #00000072;
+    background-size:cover;
+    padding: 72px;
+    border-radius: 15px;
+
+    
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -78,6 +84,12 @@ h1 {
 p {
     font-size: 1.2em;
     opacity: 0.8;
+    
+    max-width: 100ch; /* Limits paragraph width to 100 characters */
+    margin: 0 auto;   /* Centers the paragraph */
+    line-height: 1.6; /* Improves readability */
+    word-wrap: break-word; /* Ensures long words don't overflow */
+    
 }
 .portal, .gateway {
     width: 150px;
